@@ -33,11 +33,10 @@ function operate(operator, num1, num2) {
     }   
 }
 
-let nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const screen = document.getElementById('screen')
 
+const btn = document.querySelectorAll('button');
 
-const screen = document.querySelector('#displayNums')
-
-function updateDisplay() {
-    screen.appendChild(document.createTextNode(nums[3]));
-}
+btn.forEach((button) =>
+    button.addEventListener('click', (e) => screen.createTextNode(e.target.innerHTML)
+))
