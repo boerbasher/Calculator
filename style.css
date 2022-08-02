@@ -32,6 +32,6 @@ button {
     align-items: center;
 }
 
-.clear-button {
+#clear-button {
     width: calc(400px - 90px);
 }
