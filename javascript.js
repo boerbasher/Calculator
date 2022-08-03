@@ -55,19 +55,14 @@ function addNumber(num) {
 }
 
 function addOperator(op) {
+    if (screen.textContent.length >= 5) {
+        makeAnswer(screen.textContent)
+    }
     screen.textContent += op
 }
 
 function clearScreen() {
     screen.textContent = ''
-}
-
-function parseArr(arr) {
-    for (let x = 0; x < arr.length; x++) {
-        if (x != '+' || x != '-' || x != '*' || x != '/') {
-            x = parseInt(x)
-        }
-    }
 }
 
 function makeAnswer() {
