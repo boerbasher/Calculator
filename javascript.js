@@ -19,23 +19,15 @@ function divide(a, b) {
 function operate(operator, num1, num2) {
     switch(operator) {
         case '+':
-            add(num1, num2);
-            break;
+            return add(num1, num2);
         case '-':
-            subtract(num1, num2);
-            break;
+            return subtract(num1, num2);
         case '*':
-            multiply(num1, num2);
-            break;
+            return multiply(num1, num2);
         case '/':
-            divide(num1, num2);
-            break;
+            return divide(num1, num2);
     }   
 }
-
-let ls = ''
-
-let tot = 0
 
 const screen = document.getElementById('screen');
 
@@ -56,7 +48,7 @@ opBtn.forEach((button) =>
   button.addEventListener('click', () => addOperator(button.textContent))
 )
 
-equalsBtn.addEventListener('click', () => makeList(screen.textContent))
+equalsBtn.addEventListener('click', () => makeAnswer(screen.textContent))
 
 function addNumber(num) {
     screen.textContent += num
@@ -70,10 +62,17 @@ function clearScreen() {
     screen.textContent = ''
 }
 
-function makeList() {
+function parseArr(arr) {
+    for (let x = 0; x < arr.length; x++) {
+        if (x != '+' || x != '-' || x != '*' || x != '/') {
+            x = parseInt(x)
+        }
+    }
+}
+
+function makeAnswer() {
     ls = screen.textContent;
     ls = ls.split(" ");
-    ls = ls.splice();
-    screen.textContent = '';
+    screen.textContent = operate(ls[1], parseInt(ls[0]), parseInt(ls[2]))
     console.log(ls)
 }
