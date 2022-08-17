@@ -32,6 +32,10 @@ button {
     align-items: center;
 }
 
-#clear-button {
-    width: calc(400px - 90px);
+#clear-button, #back-button {
+    width: 90px;
+}
+
+#equals {
+    width: 180px;
 }
