@@ -68,6 +68,6 @@ function clearScreen() {
 function makeAnswer() {
     ls = screen.textContent;
     ls = ls.split(" ");
-    screen.textContent = operate(ls[1], parseInt(ls[0]), parseInt(ls[2]))
+    screen.textContent = operate(ls[1], parseFloat(ls[0]), parseFloat(ls[2]))
     console.log(ls)
 }
