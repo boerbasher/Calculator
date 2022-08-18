@@ -28,6 +28,7 @@ button {
 #screen {
     border: 1px solid black;
     height: 200px;
+    width: 360px;
     display: flex;
     align-items: center;
 }
