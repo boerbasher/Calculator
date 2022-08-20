@@ -27,13 +27,40 @@ main {
   button#equals {
     border-radius: 20px;
     width: 192px;
+    
+  }
+
+  button#clear-button {
+    color: #a60a3b;
+    border-color: #a60a3b;
+  }
+
+  button#back-button {
+    color: #b3753e;
+    border-color: #b3753e;
+  }
+
+  button:hover {
+    transition: 0.3s;
+    background-color: #f0e1c4;
+    color: #1f2424;
+  }
+
+  #clear-button:hover {
+    background-color: #a60a3b;
+    color: #1f2424;
+  }
+
+  #back-button:hover {
+    background-color: #b3753e;
+    color: #1f2424;
   }
 
   .calculator {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: #131615;
+    background-color: #1f2324;
     border-radius: 30px;
   }
 
