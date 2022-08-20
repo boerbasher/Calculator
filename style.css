@@ -10,3 +10,47 @@ main {
     height: 100vh;
     min-height: 750px;
   }
+
+  button {
+    margin: 6px;
+    padding: 0;
+    border: 2px solid #f0e1c4;
+    border-radius: 20px;
+    background-color: #1f2424;
+    color: #f0e1c4;
+    font-size: 3em;
+    height: 90px;
+    width: 90px;
+
+  }
+
+  button#equals {
+    border-radius: 20px;
+    width: 192px;
+  }
+
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #131615;
+    border-radius: 30px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #screen {
+    display: flex;
+    justify-content: center;
+    margin: 6px 0;
+
+    background-color: #82cfe0;
+
+    width: 95%;
+    height: 125px;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
